@@ -1,6 +1,10 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_search: 0
+  admin_toolbar_tools: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -16,6 +20,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  expand_collapse_formatter: 0
   field: 0
   field_ui: 0
   file: 0
@@ -23,6 +28,7 @@ module:
   help: 0
   history: 0
   image: 0
+  like_count: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -32,18 +38,32 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  related_blogs_custom: 0
   search: 0
+  send_mail: 0
   shortcut: 0
+  site_api: 0
+  smart_trim: 0
+  smtp: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   update: 0
   user: 0
+  view_password: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
+  webform_user_registration: 0
+  pathauto: 1
   views: 10
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  bootstrap5: 0
+  custom_theme: 0
 profile: standard

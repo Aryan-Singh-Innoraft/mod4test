@@ -1,0 +1,23 @@
+uuid: 54763516-f7aa-4898-8e1d-121f820195e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_like
+    - node.type.blog
+id: node.blog.field_like
+field_name: field_like
+entity_type: node
+bundle: blog
+label: Like
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

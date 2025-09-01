@@ -1,0 +1,19 @@
+uuid: 55035106-5221-4885-a5f2-dd81d74b6a7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+    - taxonomy.vocabulary.blog_category
+    - taxonomy.vocabulary.tags
+  module:
+    - node
+    - taxonomy
+id: bloggers
+label: Bloggers
+weight: 4
+is_admin: null
+permissions:
+  - 'create blog content'
+  - 'view term revisions in blog_category'
+  - 'view term revisions in tags'

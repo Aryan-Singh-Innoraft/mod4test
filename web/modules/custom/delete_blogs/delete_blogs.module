@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Delete blogs module.
+ */
+
+/**
+ * Implements hook_cron(). 
+ *
+ * This hook runs after a certain time interval and performs the function.
+ */
+function delete_blogs_cron() {
+  $current_time = \Drupal::time()->getCurrentTime();
+  $curr_time = date('Y-m-d H:i', $current_time);
+  $current_hour = date('H', $curr_time);
+  if ($current_hour != '05') {
+    return;
+  }
+  $past_date = new \DateTime('-1 year');
+  // $last_year = strtotime('yesterday midnight', $current_time);
+  $nids = \Drupal::entityQuery('node')
+    ->condition('type', 'blog')
+    ->condition('uid.entity.roles.target_id', 'guest_bloggers')
+    ->condition('field_publish_date', date('Y-m-d', $past_date->getTimestamp()), '<=')
+    ->accessCheck(TRUE)
+    ->execute();
+  if (!empty($nids)) {
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $storage_handler->loadMultiple($nids);
+    $storage_handler->delete($nodes);
+  }
+}

@@ -1,0 +1,8 @@
+uuid: fc1684d9-7bae-4c8e-b862-d4e056b0b85c
+langcode: en
+status: true
+dependencies: {  }
+id: become-a-seller
+label: 'Become a seller'
+description: ''
+locked: false

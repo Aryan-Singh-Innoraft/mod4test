@@ -1,0 +1,7 @@
+like_count_count:
+  path: '/likecount/{node}'
+  defaults:
+    _title: 'Like Count'
+    _controller: '\Drupal\like_count\Controller\LikeCountController::add'
+  requirements:
+    _permission: 'access content'

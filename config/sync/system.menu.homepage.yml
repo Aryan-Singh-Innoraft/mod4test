@@ -1,0 +1,8 @@
+uuid: 6fdaa99b-4282-4b67-b9b6-342c84160e2d
+langcode: en
+status: true
+dependencies: {  }
+id: homepage
+label: Homepage
+description: ''
+locked: false

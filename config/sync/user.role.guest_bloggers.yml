@@ -1,0 +1,19 @@
+uuid: 247c0638-2a8a-405d-87f3-17fc39fce888
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+    - taxonomy.vocabulary.blog_category
+    - taxonomy.vocabulary.tags
+  module:
+    - node
+    - taxonomy
+id: guest_bloggers
+label: 'Guest Bloggers'
+weight: 5
+is_admin: null
+permissions:
+  - 'create blog content'
+  - 'view term revisions in blog_category'
+  - 'view term revisions in tags'

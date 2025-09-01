@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_password
+    - field.field.user.user.field_role
   module:
-    - image
+    - path
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -21,18 +21,30 @@ content:
   contact:
     weight: 5
     region: content
+  field_password:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_role:
+    type: options_select
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
-  user_picture:
-    type: image_image
-    weight: -1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
 hidden: {  }

@@ -1,0 +1,15 @@
+site_api.content:
+  path: '/apicontent'
+  defaults:
+    _title: 'Site Content API'
+    _controller: '\Drupal\site_api\Controller\SiteApiController::content'
+  requirements:
+    _permission: 'access content'
+
+site_api.api:
+  path: '/admin/config/system/api'
+  defaults:
+    _title: 'Api'
+    _form: 'Drupal\site_api\Form\ApiForm'
+  requirements:
+    _permission: 'administer site configuration'

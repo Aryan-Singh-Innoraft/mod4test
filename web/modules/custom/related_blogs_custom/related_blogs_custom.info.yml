@@ -1,0 +1,5 @@
+name: 'Related blogs custom'
+type: module
+description: 'A module that creates a custom block.'
+package: Custom
+core_version_requirement: ^10 || ^11

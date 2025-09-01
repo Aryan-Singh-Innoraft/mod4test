@@ -1,0 +1,5 @@
+name: 'like_count'
+type: module
+description: 'A custom module that provides like feature.'
+package: Custom
+core_version_requirement: ^10 || ^11

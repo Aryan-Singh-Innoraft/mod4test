@@ -1,0 +1,25 @@
+uuid: b8d7ec82-e529-4a62-8e55-a7064891d9c6
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.become-a-seller
+  module:
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_becomeaseller
+theme: custom_theme
+region: header
+weight: -9
+provider: null
+plugin: 'system_menu_block:become-a-seller'
+settings:
+  id: 'system_menu_block:become-a-seller'
+  label: 'Become a seller'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

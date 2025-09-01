@@ -1,0 +1,20 @@
+uuid: b2e697c6-65d4-4c15-bf1d-c298bdcbf8b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - webform
+id: node.field_become_an_author
+field_name: field_become_an_author
+entity_type: node
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
