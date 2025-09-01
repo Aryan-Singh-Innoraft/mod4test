@@ -28,6 +28,7 @@ module:
   help: 0
   history: 0
   image: 0
+  like_count: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -37,6 +38,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  related_blogs_custom: 0
   search: 0
   send_mail: 0
   shortcut: 0

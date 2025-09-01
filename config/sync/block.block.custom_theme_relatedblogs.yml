@@ -1,0 +1,25 @@
+uuid: de078f67-1f98-4ec8-97b5-71ce5d1aa617
+langcode: en
+status: true
+dependencies:
+  module:
+    - related_blogs_custom
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_relatedblogs
+theme: custom_theme
+region: content
+weight: 0
+provider: null
+plugin: related_blogs_custom_related_blogs
+settings:
+  id: related_blogs_custom_related_blogs
+  label: 'Related Blogs'
+  label_display: visible
+  provider: related_blogs_custom
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/blog/*'

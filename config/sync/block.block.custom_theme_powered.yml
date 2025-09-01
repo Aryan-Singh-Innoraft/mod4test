@@ -10,7 +10,7 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: custom_theme_powered
 theme: custom_theme
-region: sidebar_first
+region: header
 weight: -7
 provider: null
 plugin: system_powered_by_block

@@ -10,7 +10,7 @@ dependencies:
     - custom_theme
 id: custom_theme_becomeaseller
 theme: custom_theme
-region: sidebar_first
+region: header
 weight: -9
 provider: null
 plugin: 'system_menu_block:become-a-seller'

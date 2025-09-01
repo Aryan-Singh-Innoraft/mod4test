@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.blog.body
     - field.field.node.blog.field_blog_tags
+    - field.field.node.blog.field_like
     - field.field.node.blog.field_published_date
     - node.type.blog
   module:
@@ -40,6 +41,13 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_like:
+    type: number
+    weight: 124
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_published_date:

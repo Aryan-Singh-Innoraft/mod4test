@@ -1,0 +1,25 @@
+uuid: 8e14c6e9-160b-4a88-aac6-fa09e152f03d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.related_blogs
+  module:
+    - views
+  theme:
+    - custom_theme
+id: custom_theme_views_block__related_blogs_block_1_3
+theme: custom_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:related_blogs-block_1'
+settings:
+  id: 'views_block:related_blogs-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility: {  }
