@@ -1,0 +1,25 @@
+uuid: 1c6bd5a7-a9af-4ce1-811a-6cc8abb8e013
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.homepage
+  module:
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_homepage
+theme: custom_theme
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:homepage'
+settings:
+  id: 'system_menu_block:homepage'
+  label: Homepage
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

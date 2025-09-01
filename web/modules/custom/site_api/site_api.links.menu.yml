@@ -1,0 +1,5 @@
+site_api.api:
+  title: Api
+  parent: system.admin_config_system
+  route_name: site_api.api
+  weight: 10

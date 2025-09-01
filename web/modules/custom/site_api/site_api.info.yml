@@ -1,0 +1,5 @@
+name: 'Site API'
+type: module
+description: 'Exposes site content using custom API.'
+package: Custom
+core_version_requirement: ^10 || ^11

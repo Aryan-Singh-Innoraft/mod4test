@@ -1,0 +1,44 @@
+.field--name-title {
+  background-color: rgb(101, 101, 236);
+  min-width: 100%;
+  display: block;
+  text-align: center;
+  padding: 5px;
+  color: white;
+}
+.field--name-body p {
+  max-width: 70%;
+  float: right;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+.ec-toggle-link {
+  float: right;
+  text-decoration: none;
+  margin: 10px;
+}
+.field--name-field-blog-tags {
+  float: right;
+  min-width: 70%;
+  background-color: rgb(101, 101, 236);
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.field--name-field-blog-tags a {
+  color: black;
+  
+ }
+.field--name-field-published-date {
+  float: right;
+  margin-top: 120px;
+}
+ .region-header {
+  display: flex;
+  padding: 30px;
+ }
+ .navbar-nav {
+  display: flex;
+  flex-direction: row;
+ }
