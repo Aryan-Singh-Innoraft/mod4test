@@ -3,3 +3,11 @@ type: theme
 description: 'Custom theme for overriding a View into Card layout'
 core_version_requirement: ^10
 base theme: bootstrap5
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  left_sidebar: 'Left sidebar'
+  footer: 'Footer'

@@ -2,3 +2,7 @@ blog-styling:
   css:
     theme:
       css/style.css: {}
+block-styling:
+  css:
+    theme:
+      css/block.css: {}

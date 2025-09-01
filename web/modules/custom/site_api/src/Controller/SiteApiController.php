@@ -52,7 +52,6 @@ final class SiteApiController extends ControllerBase {
       $author = $node->getOwner();
       $data[] = [
         'title' => $node->label(),
-        // 'nid' => $node->id(),
         'body' => $node->get('body')->value,
         'tags' => $node->get('field_blog_tags')->target_id,
         'author' => $author->getDisplayName(),

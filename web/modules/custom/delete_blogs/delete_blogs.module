@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Delete blogs module.
+ */
+
+/**
+ * Implements hook_cron(). 
+ *
+ * This hook runs after a certain time interval and performs the function.
+ */
+function delete_blogs_cron() {
+  $current_time = \Drupal::time()->getCurrentTime();
+  $curr_time = date('Y-m-d H:i', $current_time);
+  $current_year = date('Y', $current_time);
+  $current_hour = date('H', $current_time);
+  // dump($current_time);
+  // if ($current_hour != '05') {
+  //   return;
+  // }
+
+  // $yesterday_midnight = strtotime('yesterday midnight', $current_time);
+  // dump($yesterday_midnight);
+  // $yes_midnight = date('Y-m-d H:i:s', $yesterday_midnight);
+
+  $storage = \Drupal::service('entity_type.manager')->getStorage('node');
+  $query = $storage->getQuery()->accessCheck(FALSE)->condition('status', 1);
+  $query->condition('type', 'blog');
+  // $query->condition('field_event_end_date', $yes_midnight, '>=');
+  // $query->condition('field_event_end_date', $curr_time, '<=');
+  $nids = $query->execute();
+  // dump($nids);
+  if ($nids) {
+    $nodes = $storage->loadMultiple($nids);
+    // dump("Hello");
+    foreach ($nodes as $node) {
+      $owner_role = $node->getOwner()->roles();
+      // dump($owner_role)
+      // $langcode = $owner->getPreferredLangcode();
+      // dump($node->get('field_event_end_date'));
+      // dump($current_time);
+      // if ($owner_name == 'blo')
+
+      if ($owner_role == 'Guest Bloggers') {
+        // $node_title = $node->label();
+        // $mailer = \Drupal::service('plugin.manager.mail');
+        // $params['subject'] = 'Event expiration mail.';
+        // $params['message'] = Markup::create("Your event " . $node->label() . " has expired");
+        // $mailer->mail(
+        //   'send_mail',
+        //   'event_expired',
+        //   $owner_email,
+        //   $langcode,
+        //   $params
+        // );
+
+        $published_on = $node->get('field_published_date');
+        $published_year = $published_on()
+        if ($curr_time - $node->get('field_published_date') ) {
+
+        }
+        $node->delete();
+      }
+    }
+  }
+
+}
+
+// if ($node && $node->getType() === 'blogs') {
+//       $author_id = $node->getOwnerId();
+//       // getting the top 3 blogs by this author desc by likes couunt.
+//       $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery();
+//       $nids = $query
+//       ->condition('type', 'blogs')
+//       ->condition('status', 1)
+//       ->condition('uid', $author_id, '=')
+//       ->condition('nid', $node->id(), '!=')
+//       ->accessCheck(TRUE)
+//       ->sort('field_like_counts', 'DESC')
+//       ->range(0, 3)
+//       ->execute();

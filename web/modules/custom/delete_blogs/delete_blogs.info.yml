@@ -1,0 +1,5 @@
+name: 'Delete blogs'
+type: module
+description: 'A custom module that deletes the old blogs.'
+package: Custom
+core_version_requirement: ^10 || ^11
